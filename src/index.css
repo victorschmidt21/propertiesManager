@@ -1,0 +1,78 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 142 76% 36%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 142 76% 36%;
+
+    --radius: 0.5rem;
+
+    --income: 142 76% 36%;
+    --expense: 0 84% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .stats-card {
+    @apply bg-white rounded-lg shadow-sm p-4 border border-border hover:shadow-md transition-shadow;
+  }
+  
+  .stats-value {
+    @apply text-2xl font-semibold;
+  }
+  
+  .stats-label {
+    @apply text-sm text-muted-foreground;
+  }
+  
+  .expense-value {
+    @apply text-expense font-medium;
+  }
+  
+  .income-value {
+    @apply text-income font-medium;
+  }
+  
+  .chart-container {
+    @apply bg-white rounded-lg shadow-sm p-4 border border-border;
+  }
+}
